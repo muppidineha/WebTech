@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All About Neha</title>
+    <link rel="stylesheet" type="text/css" href="session4styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Signika&display=swap"
+    />
+    <style>
+      body {
+        background-color: antiquewhite;
+        border-style: double;
+        padding: 3px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 32pt;
+      }
+      h1 i {
+        font-family: "Signika";
+      }
+      p,
+      a {
+        color: black;
+        font-family: "Helvetica";
+        font-size: 12.5pt;
+        text-align: center;
+        margin-top: -18px;
+      }
+      p#info {
+        float: left;
+        font-family: "Helvetica";
+        font-size: 12pt;
+        margin-top: 75px;;
+      }
+      p#funfact {
+        float: right;
+        font-family: "Verdana";
+        font-size: 12pt;
+        margin-top: 75px;;
+      }
+      p img {
+        position: absolute;
+        align-content: center;
+        z-index: 2;
+        left: 638px;
+        top: 220px;
+      }
+      .square {
+        height: 305px;
+        width: 305px;
+        background-color: rgb(82, 3, 3);
+        position: relative;
+        /*z-index: 600; */
+        top: 17px;
+        left: 600px;
+        z-index: 1;
+      }
+
+      .mypics {
+        align-content: center;
+      }
+
+      .navigation {
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+      }
+      .navigation ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        background-color: rgb(50, 50, 50);
+        border-radius: 5px;
+      }
+      .navigation li {
+        float: left;
+      }
+      .navigation li a {
+        display: inline-block;
+        font-family: Tahoma;
+        color: white;
+        text-align: center;
+        padding: 6px;
+        margin-top: 3px;
+        text-decoration: none;
+        min-width: 100px;
+        font-weight: lighter;
+      }
+      /*.navigation a.Active {
+        background-color: darkred;
+      }*/
+      .navigation li a:hover,
+      .navigation a.Active:hover {
+        background-color: rgb(143, 134, 134);
+      }
+      .navigation .dropdowncontent {
+        display: none;
+        position: absolute;
+        background-color: rgb(50, 50, 50);
+        min-width: 100px;
+        z-index: 1;
+      }
+      .navigation .dropdowncontent a {
+        display: block;
+        text-align: left;
+      }
+      .navigation li.dropdown:hover .dropdowncontent {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="myshadow">
+      <h1 style="color: rgb(79, 79, 85)">
+        <i>Neha's <span style="color: rebeccapurple">Website</span></i>
+      </h1>
+    </div>
+   <!--<h6><a href="interests.htm">Interests</a></h6>-->
+    <br />
+    <div class="navigation">
+      <ul>
+        <li><a href="index.htm" class="Active">Home</a></li>
+        <li><a href="interests.htm" class="Active">Interests</a></li>
+        <li class="dropdown">
+          <a
+            >Search Engines</a
+          >
+          <div class="dropdowncontent">
+            <a href="http://www.google.com">Google</a>
+            <a href="http://www.bing.com">Bing</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <p class = "mypics">
+      <img
+        src="nehapfpwhatsapp.jpg"
+        usemap="#nehaspic"
+        alt="picture of me"
+        width="310"
+      />
+      <div class="square"></div>
+    </p>
+    <map name="nehaspic">
+      <area
+        shape="rect"
+        coords="1,1,318,92"
+        href="https://www.floretflowers.com/blog/"
+        alt="flowers"
+      />
+      <area
+        shape="rect"
+        coords="235,33,310,310"
+        href="https://www.floretflowers.com/blog/"
+        alt="flowers"
+      />
+      <area
+        shape="rect"
+        coords="1,1,117,315"
+        href="https://www.floretflowers.com/blog/"
+        alt="flowers"
+      />
+      <area
+        shape="circle"
+        coords="173,138,38"
+        href="https://www.linkedin.com/in/neha-muppidi/"
+        alt="nehainfo"
+      />
+    </map>
+    <hr />
+    <p id="info">
+      I am from the Bay Area in California. Specifically, I am from Fremont.<br />The
+      best way to contact me is through email: nmuppidi1@babson.edu.
+    </p>
+    <p id="funfact">
+      Something interesting about me is that I used to play competetive
+      table-tennis.
+    </p>
+  </body>
+</html>
