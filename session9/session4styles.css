@@ -1,0 +1,32 @@
+h1 {
+  font-family: "Helvetica";
+}
+
+a:hover {
+  font-size: 120%;
+}
+
+.intropara {
+  background-color: rgb(224, 224, 131);
+}
+
+.mymovies {
+  background-color: rgb(243, 191, 243);
+}
+
+.myhiking {
+  background-color: rgb(143, 218, 180);
+}
+
+.myfood {
+  background-color: rgb(243, 167, 101);
+}
+
+h2 + p::first-letter {
+  font-weight: bold;
+  font-size: 13pt;
+}
+
+.myshadow {
+  text-shadow: 5px 5px 3px greenyellow;
+}
