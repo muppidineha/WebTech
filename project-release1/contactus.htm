@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
+    />
+    <style>
+      body {
+        background-image: url("wood.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        overflow-x: hidden;
+        /* overflow-y: hidden; */
+      }
+      h1 {
+        font-family: Cookie;
+        font-size: 34pt;
+        color: black;
+        text-align: center;
+        margin-top: 22px;
+        margin-bottom: 11px;
+      }
+      .navigation {
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: 11;
+      }
+      .navigation ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        background-color: rgb(50, 50, 50);
+        opacity: 84%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+      }
+      .navigation li {
+        float: left;
+      }
+      .navigation li a {
+        display: inline-block;
+        font-family: Tahoma;
+        color: white;
+        text-align: center;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        margin-top: 3px;
+        text-decoration: none;
+        min-width: 100px;
+        font-weight: lighter;
+      }
+      .navigation li a:hover,
+      .navigation a.Active:hover {
+        background-color: rgb(87, 87, 87);
+      }
+      .navigation .dropdowncontent {
+        display: none;
+        position: absolute;
+        background-color: rgb(122, 122, 122);
+        min-width: 100px;
+        z-index: 1;
+      }
+      .navigation .dropdowncontent a {
+        display: block;
+        text-align: left;
+      }
+      .navigation li.dropdown:hover .dropdowncontent {
+        display: block;
+      }
+      .myform {
+          position: relative;
+          z-index: 9;
+          font-family: Verdana;
+          font-size: 12pt;
+          top: 52px;
+          left: 388px;
+      }
+
+      .myform td {
+        padding-right: 40px;
+      }
+      
+        .names {
+          margin-top: 38px;;
+      }
+      .genders {
+          margin-top:25px;
+      }
+      .rating {
+          margin-top: 25px;
+      }
+      .favs {
+          margin-top: 25px;
+      }
+      .comments {
+          margin-top: 25px;
+      }
+      .end {
+          margin-top: 25px;
+      }
+      #rectangle {
+        height: 588px;
+        width: 1180px;
+        margin-left: 150px;
+        margin-top: -465px;
+        background-color: rgb(168, 168, 168);
+        opacity: 50%;
+        position: relative;
+        z-index: 1;}
+    .prev {
+        margin-left: 152px;
+        font-weight: 575;
+        position: relative;
+        z-index: 10;
+        font-family: Verdana;
+        font-size: 12pt;
+        font-weight: 560;
+        margin-left: 425px;
+        top: 38px;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Contact Us</h1>
+    <div class="navigation">
+      <ul>
+        <li><a href="index.htm" class="Active">Home</a></li>
+        <li><a href="aboutme.htm" class="Active">About Me</a></li>
+        <li class="dropdown">
+          <a href="southasianfood.htm" class="Active">South Asian Food</a>
+          <div class="dropdowncontent">
+            <a href="paradisebiryani.htm">Paradise Biryani Pointe</a>
+            <a href="tirubhimas.htm">Tirupathi Bhimas</a>
+            <a href="shalimar.htm">Shalimar</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="eastasianfood.htm" class="Active">East Asian Food</a>
+          <div class="dropdowncontent">
+            <a href="bananaleaf.htm">Banana Leaf</a>
+            <a href="champagarden.htm">Champa Garden</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="coffeeanddesserts.htm" class="Active">Coffee and Desserts</a>
+          <div class="dropdowncontent">
+            <a href="doughweime.htm">Doughweime</a>
+            <a href="slapface.htm">Slap Face Coffee and Tea</a>
+          </div>
+        </li>
+        <li><a href="contactus.htm" class="Active">Contact Us</a></li>
+        <li><a href="credits.htm" class="Active">Credits</a></li>
+      </ul>
+    </div>
+    <p class="prev">
+        Want to get in touch? Please fill out this form and we'll get back to you!
+      </p>
+    <div class="myform">
+    <form method="post" action="http://wtspring13sec2.babson.edu/gordon/mailer.php">
+      <table class="names">
+        <tr>
+          <td>
+            <!-- <p class="fname"> -->
+              First Name:
+              <input type="text" name="first_name" maxlength="100" />
+            </td>
+            <!-- <p class="lname"> --> <td>
+              Last Name: <input type="text" name="last_name" maxlength="100" />
+            </td>
+          </td>
+        </tr>
+      </table>
+      <table class="genders">
+        <tr>
+            <td>
+                Gender: Male <input type="radio" name="gender" value="male" />
+            </td>
+            <td>
+                Female<input type="radio" name="gender" value="demale" />
+            </td>
+        </tr>
+    </table>
+    <p class="rating">How would you rank your overall experience with our site (1 is worst and 5 is best)?
+        <select name="D1">
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+        </select>
+    </p>
+    <table class="favs">
+        <tr>
+            <td>Which cuisine pages did you enjoy exploring?</td>
+            <td>
+                <input type="checkbox" name="images" value="images" />South Asian Food<br />
+                <input type="checkbox" name="css" value="css" />East Asian Food<br />
+                <input type="checkbox" name="tables" value="tables" />Coffee and Desserts
+            </td>
+        
+        </tr></table>
+    <p class="comments">What comments or questions do you have for us?<br/>
+        <textarea name="comments" rows="5" cols="42"></textarea>
+    </p>
+    <input class="end" type="submit" value="Submit" name="Submit"  />
+    <input class="end" type="reset" value="Reset" name="Reset" />
+    </form>
+    </div>
+    <div id="rectangle"></div>
+  </body>
+</html>

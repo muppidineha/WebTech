@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
+    />
     <title>Bay Area Bites</title>
     <style>
       body {
@@ -17,10 +21,12 @@
       }
 
       h1 {
-        font-family: Tahoma;
-        font-size: 23pt;
-        color: white;
+        font-family: Cookie;
+        font-size: 38pt;
+        color: rgb(34, 34, 34);
         text-align: center;
+        margin-top: 19px;
+        margin-bottom: 14px;
       }
 
       table {
@@ -40,6 +46,97 @@
         padding-right: 17px;
       }
 
+      /* ------------------------------------------------------------------ */
+
+      .navigation {
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: 9;
+      }
+      .navigation ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        background-color: rgb(50, 50, 50);
+        opacity: 84%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+      }
+      .navigation li {
+        float: left;
+      }
+      .navigation li a {
+        display: inline-block;
+        font-family: Tahoma;
+        color: white;
+        text-align: center;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        margin-top: 3px;
+        text-decoration: none;
+        min-width: 100px;
+        font-weight: lighter;
+      }
+      /*.navigation a.Active {
+        background-color: darkred;
+      }*/
+      .navigation li a:hover,
+      .navigation a.Active:hover {
+        background-color: rgb(87, 87, 87);
+      }
+      .navigation .dropdowncontent {
+        display: none;
+        position: absolute;
+        background-color: rgb(122, 122, 122);
+        min-width: 100px;
+        z-index: 1;
+      }
+      .navigation .dropdowncontent a {
+        display: block;
+        text-align: left;
+      }
+      .navigation li.dropdown:hover .dropdowncontent {
+        display: block;
+      }
+      #rectangle {
+        height: 600px;
+        width: 1180px;
+        margin-left: 150px;
+        margin-top: 215px;
+        background-color: rgb(168, 168, 168);
+        opacity: 85%;
+        z-index: -5;
+      }
+      .homevid {
+        margin-left: 320px;
+        margin-top: 50px;
+      }
+      h4 {
+        font-family: Tahoma;
+        text-align: center;
+        color: black;
+        font-style: italic;
+        font-weight: 550;
+        margin-top: -200px;
+        padding-top: 39px;
+        font-size: 15pt;
+      }
+      .intropara {
+        font-family: Tahoma;
+        color: black;
+        padding-left: 31px;
+        padding-right: 31px;
+        font-size: 14pt;
+        text-align: center;
+        line-height: 23pt;
+      }
       /*
       td.a {
         color: white;
@@ -50,6 +147,7 @@
   </head>
   <body>
     <h1>Bay Area Bites</h1>
+    <!--
     <table>
       <tr>
         <td><a href="aboutme.htm" style="color: white" ;>About Me</a></td>
@@ -60,6 +158,58 @@
         <td>Credits</td>
       </tr>
     </table>
+    -->
+    <div class="navigation">
+      <ul>
+        <li><a href="index.htm" class="Active">Home</a></li>
+        <li><a href="aboutme.htm" class="Active">About Me</a></li>
+        <li class="dropdown">
+          <a href="southasianfood.htm" class="Active">South Asian Food</a>
+          <div class="dropdowncontent">
+            <a href="paradisebiryani.htm">Paradise Biryani Pointe</a>
+            <a href="tirubhimas.htm">Tirupathi Bhimas</a>
+            <a href="shalimar.htm">Shalimar</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="eastasianfood.htm" class="Active">East Asian Food</a>
+          <div class="dropdowncontent">
+            <a href="bananaleaf.htm">Banana Leaf</a>
+            <a href="champagarden.htm">Champa Garden</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="coffeeanddesserts.htm" class="Active">Coffee and Desserts</a>
+          <div class="dropdowncontent">
+            <a href="doughweime.htm">Doughweime</a>
+            <a href="slapface.htm">Slap Face Coffee and Tea</a>
+          </div>
+        </li>
+        <li><a href="contactus.htm" class="Active">Contact Us</a></li>
+        <li><a href="credits.htm" class="Active">Credits</a></li>
+      </ul>
+    </div>
+    <div id="rectangle">
+      <h4>Journey into the diverse food hub that is the Bay!</h4>
+      <p class="intropara">
+        Welcome to Bay Area Bites, your personal guide to the best that the Bay
+        Area has to offer! From popular, unique-to-the-Bay chains to smaller
+        hole-in-the-wall gems, we're here to guide you through the diverse
+        deliciousness that the Bay has to offer. Malaysian appetizers, Indian
+        entrees, classic snacks, you name it. We hope you're hungry, because
+        it's time to eat!
+      </p>
+      <p class="homevid">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/-zhea4BMTGM"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </p>
+    </div>
   </body>
 </html>
 

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tirupathi Bhimas</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
+    />
+    <style>
+      body {
+        background-image: url("wood.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        overflow-y: hidden;
+        overflow-x: hidden;
+      }
+      h1 {
+        font-family: Cookie;
+        font-size: 34pt;
+        color: black;
+        text-align: center;
+        margin-top: 22px;
+        margin-bottom: 11px;
+        z-index: 10;
+      }
+      .navigation {
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: 9;
+      }
+      .navigation ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        background-color: rgb(50, 50, 50);
+        opacity: 84%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+      }
+      .navigation li {
+        float: left;
+      }
+      .navigation li a {
+        display: inline-block;
+        font-family: Tahoma;
+        color: white;
+        text-align: center;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        margin-top: 3px;
+        text-decoration: none;
+        min-width: 100px;
+        font-weight: lighter;
+      }
+
+      .navigation li a:hover,
+      .navigation a.Active:hover {
+        background-color: rgb(87, 87, 87);
+      }
+      .navigation .dropdowncontent {
+        display: none;
+        position: absolute;
+        background-color: rgb(122, 122, 122);
+        min-width: 100px;
+        z-index: 1;
+      }
+      .navigation .dropdowncontent a {
+        display: block;
+        text-align: left;
+      }
+      .navigation li.dropdown:hover .dropdowncontent {
+        display: block;
+      }
+      .words {
+        /* padding-left: 2px; */
+        /*padding-right: 22px;*/
+        font-family: Verdana;
+        font-size: 14pt;
+        color: black;
+        /*background-color: rgb(168, 168, 168);*/
+        padding-right: 20px;
+        padding-left: 35px;
+        height: 600px;
+        width: 740px;
+        margin-left: 38px;
+        margin-top: 125px;
+        top: -55px;
+        position: relative;
+        z-index: 4;
+        line-height: 25pt;
+        /*opacity: 60%;*/
+      }
+      .myrating {
+        font-family: Tahoma;
+        font-size: 19pt;
+        font-weight: 500;
+        margin-left: 200px;
+        color: black;
+        position: relative;
+        z-index: 1;
+      }
+      .myshape {
+        height: 575px;
+        width: 770px;
+        padding-left: 40px;
+        padding-right: 32px;
+        margin-left: 24px;
+        margin-top: -718px;
+        background-color: rgb(168, 168, 168);
+        opacity: 50%;
+        position: relative;
+        z-index: -1;
+      }
+
+      img {
+        transform: scale(1.15, 1.1);
+        /*float: right;*/
+        margin-top: -680px;
+        margin-right: 57px;
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tirupathi Bhimas</h1>
+    <div class="navigation">
+      <ul>
+        <li><a href="index.htm" class="Active">Home</a></li>
+        <li><a href="aboutme.htm" class="Active">About Me</a></li>
+        <li class="dropdown">
+          <a href="southasianfood.htm" class="Active">South Asian Food</a>
+          <div class="dropdowncontent">
+            <a href="paradisebiryani.htm">Paradise Biryani Pointe</a>
+            <a href="tirubhimas.htm">Tirupathi Bhimas</a>
+            <a href="shalimar.htm">Shalimar</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="eastasianfood.htm" class="Active">East Asian Food</a>
+          <div class="dropdowncontent">
+            <a href="bananaleaf.htm">Banana Leaf</a>
+            <a href="champagarden.htm">Champa Garden</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="coffeeanddesserts.htm" class="Active">Coffee and Desserts</a>
+          <div class="dropdowncontent">
+            <a href="doughweime.htm">Doughweime</a>
+            <a href="slapface.htm">Slap Face Coffee and Tea</a>
+          </div>
+        </li>
+        <li><a href="contactus.htm" class="Active">Contact Us</a></li>
+        <li><a href="credits.htm" class="Active">Credits</a></li>
+      </ul>
+    </div>
+    <div id="rectangle">
+      <p class="words">
+        <span class="myrating">
+          Rating: &#9733; &#9733; &#9733; &#9733; &#9733; (5/5)
+        </span>
+        <br />
+        <br />
+        Tirupathi Bhimas, located in the outskirts of the bustling San Jose, is
+        the perfect place for anyone seeking an authentic, traditional
+        South-Indian meal. In line with its traditional name of Tirupathi, or a
+        popular cultural town in southern India, this restaurant does not miss a
+        beat in providing guests with the complete dining experience. Right from
+        bein served on the traditional banana leaf to being able to order a
+        thali, or a sampler plate of sorts with a little bit of everything, you
+        will feel as if you're enjoying a meal in India. But, if you are
+        interested in something a little smaller or more standaard like other
+        restaurants, Tirupathi Bhimas has got you covered with smaller portioned
+        options and some common favorites like pooris and samosas. The
+        restaurant itself is constantly packed with people, both nearby
+        employees and families, but the staff is caring and very helpful, so one
+        never feels overlooked. Tirupathi Bhimas is a must-try for anyone who's
+        in the Bay!
+      </p>
+      <a href="https://www.tirupathibhimasusa.com/#menu" target="_blank"
+        ><img src="bhimas.jpg" alt="picofTB"
+      /></a>
+      <div class="myshape"></div>
+    </div>
+  </body>
+</html>
