@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credits</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
+    />
+    <style>
+      body {
+        background-image: url("wood.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        overflow-x: hidden;
+        /* overflow-y: hidden; */
+      }
+      h1 {
+        font-family: Cookie;
+        font-size: 34pt;
+        color: black;
+        text-align: center;
+        margin-top: 22px;
+        margin-bottom: 11px;
+      }
+      .navigation {
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: 11;
+      }
+      .navigation ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        background-color: rgb(50, 50, 50);
+        opacity: 84%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+      }
+      .navigation li {
+        float: left;
+      }
+      .navigation li a {
+        display: inline-block;
+        font-family: Tahoma;
+        color: white;
+        text-align: center;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        margin-top: 3px;
+        text-decoration: none;
+        min-width: 100px;
+        font-weight: lighter;
+      }
+      .navigation li a:hover,
+      .navigation a.Active:hover {
+        background-color: rgb(87, 87, 87);
+      }
+      .navigation .dropdowncontent {
+        display: none;
+        position: absolute;
+        background-color: rgb(122, 122, 122);
+        min-width: 100px;
+        z-index: 1;
+      }
+      .navigation .dropdowncontent a {
+        display: block;
+        text-align: left;
+      }
+      .navigation li.dropdown:hover .dropdowncontent {
+        display: block;
+      }
+      #rectangle {
+        height: 588px;
+        width: 1180px;
+        margin-left: 150px;
+        margin-top: 18px;
+        background-color: rgb(168, 168, 168);
+        opacity: 50%;
+        position: relative;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Credits</h1>
+    <div class="navigation">
+      <ul>
+        <li><a href="index.htm" class="Active">Home</a></li>
+        <li><a href="aboutme.htm" class="Active">About Me</a></li>
+        <li class="dropdown">
+          <a href="southasianfood.htm" class="Active">South Asian Food</a>
+          <div class="dropdowncontent">
+            <a href="paradisebiryani.htm">Paradise Biryani Pointe</a>
+            <a href="tirubhimas.htm">Tirupathi Bhimas</a>
+            <a href="shalimar.htm">Shalimar</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="eastasianfood.htm" class="Active">East Asian Food</a>
+          <div class="dropdowncontent">
+            <a href="bananaleaf.htm">Banana Leaf</a>
+            <a href="champagarden.htm">Champa Garden</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="coffeeanddesserts.htm" class="Active">Coffee and Desserts</a>
+          <div class="dropdowncontent">
+            <a href="doughweime.htm">Doughweime</a>
+            <a href="slapface.htm">Slap Face Coffee and Tea</a>
+          </div>
+        </li>
+        <li><a href="contactus.htm" class="Active">Contact Us</a></li>
+        <li><a href="credits.htm" class="Active">Credits</a></li>
+      </ul>
+    </div>
+    <div id="rectangle"></div>
+    <table>
+      <tr>
+        <th>Cuisine Type</th>
+        <th>Restaurant</th>
+        <th>Background Image Credits</th>
+        <th>On-Page Image Credits</th>
+        <th>Music/Video Credits</th>
+      </tr>
+      <tr>
+        <td rowspan="3">South Asian Cuisine</td>
+        <td>Paradise Biryani Pointe</td>
+        <td>
+          Wood Background - Freepik -
+          <span style="font-style: italic">denamorado</span>
+        </td>
+        <td>
+          Biryani Image - Yelp -
+          <span style="font-style: italic">Hetal P.</span>
+        </td>
+        <td>NA</td>
+      </tr>
+      <tr>
+        <td>Tirupathi Bhimas</td>
+        <td>
+          Wood Background - Freepik -
+          <span style="font-style: italic">denamorado</span>
+        </td>
+        <td>
+          Thali Image - Yelp -
+          <span style="font-style: italic">Jaykrishna Caterers</span>
+        </td>
+        <td>NA</td>
+      </tr>
+
+      <tr>
+        <td>Shalimar</td>
+        <td>
+          Wood Background - Freepik -
+          <span style="font-style: italic">denamorado</span>
+        </td>
+        <td>
+          Naan and Curry Image - Yelp -
+          <span style="font-style: italic">Jaykrishna Caterers</span>
+        </td>
+        <td>NA</td>
+      </tr>
+    </table>
+  </body>
+</html>
