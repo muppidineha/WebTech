@@ -82,35 +82,35 @@
         display: block;
       }
       .myform {
-          position: relative;
-          z-index: 9;
-          font-family: Verdana;
-          font-size: 12pt;
-          top: 52px;
-          left: 388px;
+        position: relative;
+        z-index: 9;
+        font-family: Verdana;
+        font-size: 12pt;
+        top: 52px;
+        left: 388px;
       }
 
       .myform td {
         padding-right: 40px;
       }
-      
-        .names {
-          margin-top: 38px;;
+
+      .names {
+        margin-top: 38px;
       }
       .genders {
-          margin-top:25px;
+        margin-top: 25px;
       }
       .rating {
-          margin-top: 25px;
+        margin-top: 25px;
       }
       .favs {
-          margin-top: 25px;
+        margin-top: 25px;
       }
       .comments {
-          margin-top: 25px;
+        margin-top: 25px;
       }
       .end {
-          margin-top: 25px;
+        margin-top: 25px;
       }
       #rectangle {
         height: 588px;
@@ -120,8 +120,9 @@
         background-color: rgb(168, 168, 168);
         opacity: 50%;
         position: relative;
-        z-index: 1;}
-    .prev {
+        z-index: 1;
+      }
+      .prev {
         margin-left: 152px;
         font-weight: 575;
         position: relative;
@@ -131,7 +132,7 @@
         font-weight: 560;
         margin-left: 425px;
         top: 38px;
-    }
+      }
     </style>
   </head>
   <body>
@@ -167,58 +168,61 @@
       </ul>
     </div>
     <p class="prev">
-        Want to get in touch? Please fill out this form and we'll get back to you!
-      </p>
+      Want to get in touch? Please fill out this form and we'll get back to you!
+    </p>
     <div class="myform">
-    <form method="post" action="http://wtspring13sec2.babson.edu/gordon/mailer.php">
-      <table class="names">
-        <tr>
-          <td>
-            <!-- <p class="fname"> -->
+      <form method="post" action="mailer.php">
+        <table class="names">
+          <tr>
+            <td>
+              <!-- <p class="fname"> -->
               First Name:
               <input type="text" name="first_name" maxlength="100" />
             </td>
-            <!-- <p class="lname"> --> <td>
+            <!-- <p class="lname"> -->
+            <td>
               Last Name: <input type="text" name="last_name" maxlength="100" />
             </td>
-          </td>
-        </tr>
-      </table>
-      <table class="genders">
-        <tr>
+          </tr>
+        </table>
+        <table class="genders">
+          <tr>
             <td>
-                Gender: Male <input type="radio" name="gender" value="male" />
+              Gender: Male <input type="radio" name="gender" value="male" />
             </td>
-            <td>
-                Female<input type="radio" name="gender" value="demale" />
-            </td>
-        </tr>
-    </table>
-    <p class="rating">How would you rank your overall experience with our site (1 is worst and 5 is best)?
-        <select name="D1">
+            <td>Female<input type="radio" name="gender" value="female" /></td>
+          </tr>
+        </table>
+        <p class="rating">
+          How would you rank your overall experience with our site (1 is worst
+          and 5 is best)?
+          <select name="D1">
             <option value="5">5</option>
             <option value="4">4</option>
             <option value="3">3</option>
             <option value="2">2</option>
             <option value="1">1</option>
-        </select>
-    </p>
-    <table class="favs">
-        <tr>
+          </select>
+        </p>
+        <table class="favs">
+          <tr>
             <td>Which cuisine pages did you enjoy exploring?</td>
             <td>
-                <input type="checkbox" name="images" value="images" />South Asian Food<br />
-                <input type="checkbox" name="css" value="css" />East Asian Food<br />
-                <input type="checkbox" name="tables" value="tables" />Coffee and Desserts
+              <input type="checkbox" name="images" value="images" />South Asian
+              Food<br />
+              <input type="checkbox" name="css" value="css" />East Asian Food<br />
+              <input type="checkbox" name="tables" value="tables" />Coffee and
+              Desserts
             </td>
-        
-        </tr></table>
-    <p class="comments">What comments or questions do you have for us?<br/>
-        <textarea name="comments" rows="5" cols="42"></textarea>
-    </p>
-    <input class="end" type="submit" value="Submit" name="Submit"  />
-    <input class="end" type="reset" value="Reset" name="Reset" />
-    </form>
+          </tr>
+        </table>
+        <p class="comments">
+          What comments or questions do you have for us?<br />
+          <textarea name="comments" rows="5" cols="42"></textarea>
+        </p>
+        <input class="end" type="submit" value="Submit" name="Submit" />
+        <input class="end" type="reset" value="Reset" name="Reset" />
+      </form>
     </div>
     <div id="rectangle"></div>
   </body>
