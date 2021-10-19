@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MIS3690 Survey</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <style>
+      td {
+        padding-right: 40px;
+      }
+      /* p.fname {
+        margin-left: 50%;
+      }
+      p.lname {
+        margin-right: 50%;
+      } */
+      /* .names {display:} */
+      .names {
+          margin-top: 38px;;
+      }
+      .genders {
+          margin-top:25px;
+      }
+      .grades {
+          margin-top: 25px;
+      }
+      .favs {
+          margin-top: 25px;
+      }
+      .comments {
+          margin-top: 25px;
+      }
+      .end {
+          margin-top: 25px;
+      }
+    </style>
+    <script type="text/javascript">
+    function processForm()
+    {	
+      var fun1=document.getElementById("fun1")
+      var fun2=document.getElementById("fun2")
+      var fun3=document.getElementById("fun3")
+      var fun4=document.getElementById("fun4")
+	    if (document.getElementById("fname").value=="")
+	      {
+        alert("Entering your first name is required.");
+		    document.getElementById("fname").focus();
+      	}
+	    else if (document.getElementById("lname").value=="")
+	      {
+        alert("Entering your last name is required.");
+		    document.getElementById("lname").focus();
+      	}
+      else if (fun1.checked == false && fun2.checked == false && fun3.checked == false && fun4.checked == false) 
+        {
+        alert("Selecting your favorite activity is required.");
+        }
+      else if ((document.getElementById("grad").value < 2021) || (document.getElementById("grad").value > 2024))
+        {
+        alert("The year you entered is invalid.")
+        }
+      else
+			  {
+				  return true;
+			  }
+			  return false;
+      }
+      </script>
+  </head>
+  <body>
+    <h1>MIS3690 Student Survey</h1>
+    <p>
+      Please complete the following survey. You must answer each question. When
+      you are done, please click on the Submit button.
+    </p>
+    <form method="post" action="http://wtspring13sec2.babson.edu/gordon/mailer.php" onsubmit="return processForm()">
+      <table class="names">
+        <tr>
+          <td>
+            <!-- <p class="fname"> -->
+              First name:
+              <input type="text" id="fname" name="first_name" maxlength="100" />
+            </td>
+            <!-- <p class="lname"> --> <td>
+              Last name: <input type="text" id="lname" name="last_name" maxlength="100" />
+            </td>
+          </td>
+        </tr>
+      </table>
+      <table class="genders">
+        <tr>
+            <td>
+                Gender: Male <input type="radio" name="gender" value="male" />
+            </td>
+            <td>
+                Female<input type="radio" name="gender" value="female" />
+            </td>
+        </tr>
+    </table>
+    <table class="genders">
+      <tr>
+          <td>What is your graduation year?
+            <input type="text" id="grad" name="yearofgrad" maxlength="100" />
+          </td>
+          </tr> </table>
+    <p class="grades">What grade do you expect to receive?
+        <select name="D1">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="F">F</option>
+        </select>
+    </p>
+    <table class="favs">
+        <tr>
+            <td>Which topics did you find to be fun?</td>
+            <td>
+                <input type="checkbox" id="fun1" name="images" value="images" /> Images<br />
+                <input type="checkbox" id="fun2" name="css" value="css" /> CSS<br />
+                <input type="checkbox" id="fun3" name="tables" value="tables" /> Tables<br />
+                <input type="checkbox" id="fun4" name="forms" value="forms" /> Forms
+            </td>
+        
+        </tr></table>
+    <p class="comments">Please add any comments you have:<br/>
+        <textarea name="comments" rows="5" cols="42"></textarea>
+    </p>
+    <input class="end" type="submit" value="Submit" name="Submit"  />
+    <input class="end" type="reset" value="Reset" name="Reset" />
+    </form>
+  </body>
+</html>
