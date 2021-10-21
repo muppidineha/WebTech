@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All About Neha</title>
+    <link rel="stylesheet" type="text/css" href="session4styles.css" />
+    <style>
+      /*
+      body {
+        background-color: antiquewhite;
+        border-style: double;
+        padding: 3px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 32pt;
+      }
+      h6,
+      a {
+        color: black;
+        font-family: "Helvetica";
+        font-size: 12.5pt;
+        text-align: center;
+        margin-top: -18px;
+      }
+      p#info {
+        float: left;
+        font-family: "Helvetica";
+        font-size: 12pt;
+      }
+      p#funfact {
+        float: right;
+        font-family: "Verdana";
+        font-size: 12pt;
+      }
+      */
+      #mybutton {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+    </style>
+
+    <script>
+      function ChgStyle() {
+        document.getElementById("myh1").style.color = "green";
+        document.getElementById("myh1").style.font = "30pt 'Comic Sans MS'";
+        document.getElementById("myh1").style.textAlign = "center";
+      }
+
+      function ChgToFlowers() {
+        document.getElementById("myimage").src = "flowers.jpg";
+      }
+      function ChgToMe() {
+        document.getElementById("myimage").src = "nehapfpwhatsapp.jpg";
+      }
+      function chgpos() {
+        document.getElementById("mybutton").style.left = mypick =
+          Math.floor(Math.random() * 501) + "px";
+        document.getElementById("mybutton").style.top = mypick =
+          Math.floor(Math.random() * 501) + "px";
+      }
+      function chgbuttonwords() {
+        mypick = Math.floor(Math.random() * 5);
+        if (mypick == 0) {
+          document.getElementById("mybutton").innerHTML = "Click Me";
+        } else if (mypick == 1) {
+          document.getElementById("mybutton").innerHTML = "Move Me";
+        } else if (mypick == 2) {
+          document.getElementById("mybutton").innerHTML = "Click Here";
+        } else if (mypick == 3) {
+          document.getElementById("mybutton").innerHTML = "Button";
+        } else {
+          document.getElementById("mybutton").innerHTML = "Next";
+        }
+        chgpos();
+      }
+    </script>
+  </head>
+  <body>
+    <button id="mybutton" onclick="chgbuttonwords()">Click Me</button>
+  </body>
+</html>
