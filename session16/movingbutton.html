@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Random Background Color</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script>
+      var btnWords = new Array(
+        "Click Me",
+        "Move Me",
+        "Click Here",
+        "Button",
+        "Next"
+      );
+      var x;
+      function chgButton() {
+        var randIndex = Math.floor(Math.random() * 5);
+        var rand1 = Math.floor(Math.random() * 500);
+        var rand2 = Math.floor(Math.random() * 500);
+        var b = document.getElementById("btn");
+        b.innerHTML = btnWords[randIndex];
+        b.style.top = rand1 + "px";
+        b.style.left = rand2 + "px";
+        x = setTimeout(
+          "chgButton()",
+          1500
+        ); /* made this 1500 miliseconds instead of 750 so I could click fast enough to test the stop function */
+      }
+      function stop() {
+        document.getElementById("btn");
+        clearTimeout(x);
+      }
+    </script>
+  </head>
+  <body onload="chgButton()">
+    <button
+      id="btn"
+      style="position: absolute; top: 0px; left: 0px"
+      onclick="stop()"
+    >
+      Click Me
+    </button>
+  </body>
+</html>
