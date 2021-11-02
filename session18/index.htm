@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neha's Canvas</title>
+    <script>
+      function draw() {
+        var canvas = document.getElementById("mycanvas");
+        var ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+        ctx.strokeStyle = "#9794f9";
+        ctx.lineWidth = 3;
+
+        ctx.moveTo(175, 175);
+        ctx.arc(175, 175, 108, 0, -0.6, true);
+
+        ctx.moveTo(175, 175);
+        ctx.arc(175, 175, 108, -0.75, -1.35, true);
+
+        ctx.moveTo(175, 175);
+        ctx.arc(175, 175, 108, -1.5, -2.1, true);
+
+        ctx.moveTo(175, 175);
+        ctx.arc(175, 175, 108, -2.25, -2.85, true);
+
+        ctx.moveTo(175, 175);
+        ctx.arc(175, 175, 108, -3, -3.6, true);
+
+        ctx.moveTo(175, 175);
+        ctx.arc(175, 175, 108, -3.75, -4.35, true);
+
+        ctx.moveTo(175, 175);
+        ctx.arc(175, 175, 108, -4.5, -5.1, true);
+
+        ctx.moveTo(175, 175);
+        ctx.arc(175, 175, 108, -5.25, -5.85, true);
+
+        ctx.fillStyle = "#b6a9d6";
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(175, 175, 34, 0, Math.PI * 2, true);
+        ctx.fillStyle = "#fed240";
+        ctx.fill();
+      }
+    </script>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body onload="draw();">
+    <canvas id="mycanvas" width="350" height="350"></canvas>
+  </body>
+</html>
