@@ -11,12 +11,12 @@
           document.cookie = cName + "=" + today; }
         function checkcookies() {
             if (readCookie("lastVisit") = null) {
-                document.getElementById("message") = "First visit!";
+                document.getElementById("message").innerHTML = "First visit!";
                 document.cookie("lastVisit") = lastVisit();
             }
             else {
                 var newDate = readCookie("lastVisit");
-                document.getElementById("message") = "Your last visit was on the date " + newDate.toString();
+                document.getElementById("message").innerHTML = "Your last visit was on the date " + newDate.toString();
             }
         }
     </script>
