@@ -4,22 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Cookies</title>
     <script>
-        var today = new Date();
-      function lastVisit(cName) {
-          document.cookie = cName + "=" + today; }
-        function checkcookies() {
-            if (readCookie("lastVisit") = null) {
-                document.getElementById("message").innerHTML = "First visit!";
-                document.cookie("lastVisit") = lastVisit();
-            }
-            else {
-                var newDate = readCookie("lastVisit");
-                document.getElementById("message").innerHTML = "Your last visit was on the date " + newDate.toString();
-                document.cookie("lastVisit") = lastVisit();
-            }
-        }
+                  function lastVisit(cName, cValue) {
+                    var today = new Date();
+                      document.cookie = cName + "=" + today;
+                      document.cookie = cName + "=" + cValue +
+      ";thelastvisit="+ today.toString()
+                    }
+                    function checkcookies() {
+                        if (readCookie("lastVisit") = null) {
+                            document.getElementById("message").innerHTML = "First visit!";
+                            document.cookie("lastVisit") = lastVisit();
+                        }
+                        else {
+                            var newDate = readCookie("lastVisit");
+                            document.getElementById("message").innerHTML = "Your last visit was on the date " + newDate;
+                            document.cookie("lastVisit") = lastVisit();
+                        }
+                    }
     </script>
   </head>
   <body onload=" return checkcookies()">
