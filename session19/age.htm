@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age</title>
+    <script>
+      var date1 = new Date();
+      var day = document.getElementById("d").value;
+      var month = document.getElementById("month").value;
+      var year = document.getElementById("year").value;
+      var currentYear = date1.getFullYear();
+      var currentMonth = date1.getMonth();
+      var currentDate = date1.getDate();
+      function calculation() {
+        if (currentMonth > month && currentDate > day) {
+          var age = currentYear - year + 1;
+          alert("You are " + age + " years old!");
+          return false;
+        } else {
+          var age = currentYear - 1 - year + 1;
+          alert("You are " + age + " years old!");
+          return false;
+        }
+        /*
+        else if (currentMonth < month || currentDate > date) {
+          var age = currentYear - 1 - year + 1;
+          alert("You are " + age + " years old!");
+        } else {
+          return true;
+        }
+        return false; */
+      }
+    </script>
+  </head>
+  <body>
+    <form method="post" onsubmit="return calculation()">
+      <p>Date: <input type="number" id="d" name="day" /></p>
+      <p>Month: <input type="number" id="month" name="month" /></p>
+      <p>Year: <input type="number" id="year" name="year" /></p>
+      <input class="end" type="submit" value="Submit" name="Submit" />
+      <input class="end" type="reset" value="Reset" name="Reset" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        var today = new Date();
+      function lastVisit(cName) {
+          document.cookie = cName + "=" + today; }
+        function checkcookies() {
+            if (readCookie("lastVisit") = null) {
+                document.getElementById("message") = "First visit!";
+                document.cookie("lastVisit") = lastVisit();
+            }
+            else {
+                var newDate = readCookie("lastVisit");
+                document.getElementById("message") = "Your last visit was on the date " + newDate.toString();
+            }
+        }
+    </script>
+  </head>
+  <body onload=" return checkcookies()">
+    <h1>Cookies</h1>
+    <p id="message"></p>
+  </body>
+</html>
