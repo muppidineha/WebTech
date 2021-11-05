@@ -24,11 +24,11 @@
            return cookieParts[1]
           }
         function checkcookies() {
-          if (readCookie("lastVisit") = null) {
+            if (readCookie("lastVisit") = null) {
               document.getElementById("message").innerHTML = "First visit!";
               document.cookie("lastVisit") = lastVisit();
           }
-          else {
+            else {
               var newDate = readCookie("lastVisit");
               document.getElementById("message").innerHTML = "Your last visit was on the date " + newDate;
               document.cookie("lastVisit") = lastVisit();
