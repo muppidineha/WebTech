@@ -6,34 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cookies</title>
     <script>
-      function lastVisit(cName, cValue) {
-          var today = new Date();
-          document.cookie = cName + "=" + today;
-          document.cookie = cName + "=" + cValue +
-         ";lastvisit="+ today.toString()
+        function lastVisit(cName, cValue) {
+            var today = new Date();
+            document.cookie = cName + "=" + today;
+            document.cookie = cName + "=" + cValue +
+           ";lastvisit="+ today.toString()
+            }
+        function readCookie (cName) {
+           c=document.cookie
+           var s=c.indexOf(cName)
+           var cs=c.substring(s)
+           var e=cs.indexOf(";")
+           if (e != -1) {
+              cs = cs.substring(0,e)
+           }
+           cookieParts=cs.split("=")
+           return cookieParts[1]
           }
-      function readCookie (cName) {
-         c=document.cookie
-         var s=c.indexOf(cName)
-         var cs=c.substring(s)
-         var e=cs.indexOf(";")
-         if (e != -1) {
-            cs = cs.substring(0,e)
-         }
-         cookieParts=cs.split("=")
-         return cookieParts[1]
-        }
-      function checkcookies() {
-         if (readCookie("lastVisit") = null) {
-          document.getElementById("message").innerHTML = "First visit!";
-          document.cookie("lastVisit") = lastVisit();
-        }
-         else {
-          var newDate = readCookie("lastVisit");
-          document.getElementById("message").innerHTML = "Your last visit was on the date " + newDate;
-          document.cookie("lastVisit") = lastVisit();
-        }
-        }
+        function checkcookies() {
+          if (readCookie("lastVisit") = null) {
+              document.getElementById("message").innerHTML = "First visit!";
+              document.cookie("lastVisit") = lastVisit();
+          }
+          else {
+              var newDate = readCookie("lastVisit");
+              document.getElementById("message").innerHTML = "Your last visit was on the date " + newDate;
+              document.cookie("lastVisit") = lastVisit();
+          }
+      }
     </script>
   </head>
   <body onload=" return checkcookies()">
