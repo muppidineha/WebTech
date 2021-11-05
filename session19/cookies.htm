@@ -17,6 +17,7 @@
             else {
                 var newDate = readCookie("lastVisit");
                 document.getElementById("message").innerHTML = "Your last visit was on the date " + newDate.toString();
+                document.cookie("lastVisit") = lastVisit();
             }
         }
     </script>
