@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Page title goes here</title>
+
+    <style>
+      /* Your styles go here */
+      table,
+      td {
+        border: 2px solid black;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+    </style>
+
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script>
+      $(function () {
+        // jQuery methods go here...
+        $("#ho").click(function () {
+          $("tr:odd").hide("1");
+        });
+        $("tr").click(function () {
+          $(this).fadeOut(3000);
+        });
+        $("#sa").click(function () {
+          $("tr:odd").css("background-color", "yellow");
+          $("tr").show("1");
+        });
+      });
+      /* Your additional JavaScript goes here */
+    </script>
+  </head>
+
+  <body>
+    <!-- Your HTML goes here -->
+    <table>
+      <tr>
+        <td>1</td>
+        <td>This is Row 1</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>This is Row 2</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>This is Row 3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>This is Row 4</td>
+      </tr>
+    </table>
+    <button id="ho">Hide Out</button>
+    <button id="sa">Show All</button>
+  </body>
+</html>

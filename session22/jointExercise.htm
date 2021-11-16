@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Page title goes here</title>
+
+    <style>
+      /* Your styles go here */
+      .a {
+        color: navy;
+      }
+      .b {
+        color: maroon;
+      }
+    </style>
+
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script>
+      $(function () {
+        // jQuery methods go here...
+        //  $("p").css("border", "2px solid red");
+        $("p:odd").fadeOut(3000);
+        $(".a").css("fontSize", "30pt");
+        $("#list1").css("background-color", "pink");
+        $("li[class!='a']").css("font-variant", "small-caps");
+        $("p:first").click(function () {
+          $("p").css("border", "2px solid red");
+        });
+        // $("p:first").mouseover(function () {
+        //  alert("hello");
+        // });
+        $("p").mouseover(function () {
+          $(this).css("border", "3px dotted blue");
+        });
+        $("p").mouseout(function () {
+          $(this).css("border", "none");
+        });
+      });
+      /* Your additional JavaScript goes here */
+    </script>
+  </head>
+
+  <body>
+    <ul id="list1">
+      <li class="a">item 0</li>
+      <li class="a">item 1</li>
+      <li class="b">item 2</li>
+      <li class="b">item 3</li>
+    </ul>
+    <p class="a">This is paragraph 0</p>
+    <p>This is paragraph 1</p>
+    <p class="b">This is paragraph 2</p>
+    <p>This is paragraph 3</p>
+  </body>
+</html>
