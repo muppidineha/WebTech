@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All About Neha</title>
+    <link rel="stylesheet" type="text/css" href="session4styles.css" />
+    <style>
+      body {
+        background-color: antiquewhite;
+        border-style: double;
+        padding: 3px;
+        overflow-y: hidden;
+      }
+      h1 {
+        text-align: center;
+        font-size: 32pt;
+        /* border: solid grey 1px; */
+      }
+      h6,
+      a {
+        color: black;
+        font-family: "Helvetica";
+        font-size: 12.5pt;
+        text-align: center;
+        margin-top: 10px;
+      }
+      p#info {
+        float: left;
+        font-family: "Helvetica";
+        font-size: 12pt;
+      }
+      p#funfact {
+        float: right;
+        font-family: "Verdana";
+        font-size: 12pt;
+      }
+      #sec {
+        text-align: center;
+        margin-top: -25px;
+        display: none;
+      }
+
+      button {
+        margin-top: 75px;
+      }
+
+      .mytest {
+        font-family: Verdana;
+        color: red;
+        font-size: 38px;
+      }
+
+      #myb {
+        align-content: center;
+      }
+
+      #open,
+      #sec {
+        padding: 1px;
+        text-align: center;
+        background-color: powderblue;
+        border: solid 1px grey;
+      }
+    </style>
+
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript">
+      /*
+        $(document).ready(function () {
+          $("#open").click(function () {
+            $("#sec").slideDown("fast");
+          });
+        });
+        */
+      $(function () {
+        $("#open").click(function () {
+          $("#sec").slideDown("slow");
+        });
+
+        $("#b1").click(function () {
+          alert("HTML: " + $("#mytitle").html());
+        });
+
+        $("#b2").click(function () {
+          $("#funfact").append("<b> It was fun.</b>");
+        });
+
+        $("#b3").click(function () {
+          $("#info").remove();
+        });
+
+        $("#b4").click(function () {
+          $("h1").addClass("mytest");
+        });
+
+        $("#b5").click(function () {
+          $("#me").animate({ left: "250px" });
+        });
+
+        $("#b6").click(function () {
+          $("#me").delay(800).fadeOut();
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="open" class="myshadow">
+      <h1 id="mytitle" style="color: rgb(79, 79, 85)">
+        <i>Neha's <span style="color: rebeccapurple">Website</span></i>
+      </h1>
+    </div>
+    <div id="sec"><h5>This is my website!</h5></div>
+    <h6><a href="interests.htm">Interests</a></h6>
+    <br />
+    <div id="me">
+      <h6>
+        <img src="nehapfpwhatsapp.jpg" alt="picture of me" width="310" />
+      </h6>
+    </div>
+    <hr />
+    <p id="info">
+      I am from the Bay Area in California. Specifically, I am from Fremont.<br />The
+      best way to contact me is through email: nmuppidi1@babson.edu.
+    </p>
+    <p id="funfact">
+      Something interesting about me is that I used to play competetive
+      table-tennis.
+    </p>
+    <button id="#b1">Show HTML</button>
+    <button id="#b2">Append Text</button>
+    <button id="#b3">Remove Contents</button>
+    <button id="#b4">Add a Class</button>
+    <button id="#b5">Animation</button>
+    <button id="#b6">Delay</button>
+
+    <!-- <hr> -->
+  </body>
+</html>
