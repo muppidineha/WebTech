@@ -1,0 +1,258 @@
+<!--
+Table created with a <table> tag and at least one colspan or rowspan attribute - located on Credits page
+Bulleted or numbered list with one or more indented sub-lists - located on About Me page
+Contact page contains a form that includes radio buttons and/or check boxes, text and text area fields, and a <select> tag - located on Contact Us page
+A PHP mailer should be used at the server to send the form results to your email address - located in mailer.php file
+Image map with at least two hot spots on a single image - located on the South Asian Food, East Asian Food, and Coffee and Desserts pages (at the bottom)
+At least one video exists on your site - located on Home Page
+Background music plays automatically on one of your pages when it loads or audio controls allow the user to play the music if desired - located on the South Asian Food, East Asian Food, and Coffee and Desserts pages
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
+    />
+    <title>Bay Area Bites</title>
+    <style>
+      body {
+        background-image: url("homebg.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        /*background-repeat: no-repeat;
+        object-fit: fill;*/
+      }
+
+      h1 {
+        font-family: Cookie;
+        font-size: 38pt;
+        color: rgb(34, 34, 34);
+        text-align: center;
+        margin-top: 19px;
+        margin-bottom: 14px;
+      }
+
+      table {
+        font-family: Tahoma;
+        color: white;
+        align-content: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      tr {
+        align-content: center;
+      }
+
+      td {
+        padding-left: 17px;
+        padding-right: 17px;
+      }
+
+      /* ------------------------------------------------------------------ */
+
+      .navigation {
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: 9;
+      }
+      .navigation ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        background-color: rgb(50, 50, 50);
+        opacity: 84%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+      }
+      .navigation li {
+        float: left;
+      }
+      .navigation li a {
+        display: inline-block;
+        font-family: Tahoma;
+        color: white;
+        text-align: center;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        margin-top: 3px;
+        text-decoration: none;
+        min-width: 100px;
+        font-weight: lighter;
+      }
+      /*.navigation a.Active {
+        background-color: darkred;
+      }*/
+      .navigation li a:hover,
+      .navigation a.Active:hover {
+        background-color: rgb(87, 87, 87);
+      }
+      .navigation .dropdowncontent {
+        display: none;
+        position: absolute;
+        background-color: rgb(122, 122, 122);
+        min-width: 100px;
+        z-index: 1;
+      }
+      .navigation .dropdowncontent a {
+        display: block;
+        text-align: left;
+      }
+      .navigation li.dropdown:hover .dropdowncontent {
+        display: block;
+      }
+      #rectangle {
+        height: 600px;
+        width: 1180px;
+        margin-left: 150px;
+        margin-top: 215px;
+        background-color: rgb(168, 168, 168);
+        opacity: 85%;
+        z-index: -5;
+      }
+      .homevid {
+        margin-left: 320px;
+        margin-top: 50px;
+      }
+      h4 {
+        font-family: Tahoma;
+        text-align: center;
+        color: black;
+        font-style: italic;
+        font-weight: 550;
+        margin-top: -200px;
+        padding-top: 39px;
+        font-size: 15pt;
+      }
+      .intropara {
+        font-family: Tahoma;
+        color: black;
+        padding-left: 31px;
+        padding-right: 31px;
+        font-size: 14pt;
+        text-align: center;
+        line-height: 23pt;
+      }
+      /*
+      td.a {
+        color: white;
+        text-decoration: none;
+      }
+      */
+    </style>
+
+    <script>
+      function mytbig() {
+        document.getElementById("t").style.fontSize = "44pt";
+      }
+      function mytback() {
+        document.getElementById("t").style.fontSize = "38pt";
+      }
+      function newt() {
+        mynum = Math.floor(Math.random() * 2);
+        if (mynum == 0) {
+          document.getElementById("t").innerHTML = "Bay Area Bitez";
+        } else {
+          document.getElementById("t").innerHTML = "Bay Area Bites";
+        }
+      }
+
+      // <![CDATA[
+      var mobile =
+        /iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(
+          navigator.userAgent.toLowerCase()
+        );
+      if (mobile) {
+        document.location = "projectMobile.htm";
+      }
+      // ]]>
+    </script>
+  </head>
+  <body>
+    <h1>
+      <span
+        id="t"
+        onmouseover="mytbig()"
+        onmouseout="mytback()"
+        onclick="newt()"
+        >Bay Area Bites</span
+      >
+    </h1>
+    <!--
+    <table>
+      <tr>
+        <td><a href="aboutme.htm" style="color: white" ;>About Me</a></td>
+        <td>South Asian Food</td>
+        <td>East Asian Food</td>
+        <td>Coffee and Desserts</td>
+        <td>Contact Us</td>
+        <td>Credits</td>
+      </tr>
+    </table>
+    -->
+    <div class="navigation">
+      <ul>
+        <li><a href="index.htm" class="Active">Home</a></li>
+        <li><a href="aboutme.htm" class="Active">About Me</a></li>
+        <li class="dropdown">
+          <a href="southasianfood.htm" class="Active">South Asian Food</a>
+          <div class="dropdowncontent">
+            <a href="paradisebiryani.htm">Paradise Biryani Pointe</a>
+            <a href="tirubhimas.htm">Tirupathi Bhimas</a>
+            <a href="shalimar.htm">Shalimar</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="eastasianfood.htm" class="Active">East Asian Food</a>
+          <div class="dropdowncontent">
+            <a href="bananaleaf.htm">Banana Leaf</a>
+            <a href="champagarden.htm">Champa Garden</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="coffeeanddesserts.htm" class="Active">Coffee and Desserts</a>
+          <div class="dropdowncontent">
+            <a href="doughweime.htm">Doughweime</a>
+            <a href="slapface.htm">Slap Face Coffee and Tea</a>
+          </div>
+        </li>
+        <li><a href="contactus.htm" class="Active">Contact Us</a></li>
+        <li><a href="credits.htm" class="Active">Credits</a></li>
+      </ul>
+    </div>
+    <div id="rectangle">
+      <h4>Journey into the diverse food hub that is the Bay!</h4>
+      <p class="intropara">
+        Welcome to Bay Area Bites, your personal guide to the best that the Bay
+        Area has to offer! From popular, unique-to-the-Bay chains to smaller
+        hole-in-the-wall gems, we're here to guide you through the diverse
+        deliciousness that the Bay has to offer. Malaysian appetizers, Indian
+        entrees, classic snacks, you name it. We hope you're hungry, because
+        it's time to eat!
+      </p>
+      <p class="homevid">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/-zhea4BMTGM"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </p>
+    </div>
+  </body>
+</html>

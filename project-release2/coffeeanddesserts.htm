@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee and Desserts</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
+    />
+    <style>
+      body {
+        background-image: url("wood.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        overflow-y: hidden;
+        overflow-x: hidden;
+      }
+      h1 {
+        font-family: Cookie;
+        font-size: 34pt;
+        color: black;
+        text-align: center;
+        margin-top: 22px;
+        margin-bottom: 11px;
+        z-index: 10;
+      }
+      .navigation {
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: 12;
+      }
+      .navigation ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        background-color: rgb(50, 50, 50);
+        opacity: 84%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+      }
+      .navigation li {
+        float: left;
+      }
+      .navigation li a {
+        display: inline-block;
+        font-family: Tahoma;
+        color: white;
+        text-align: center;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        margin-top: 3px;
+        text-decoration: none;
+        min-width: 100px;
+        font-weight: lighter;
+      }
+      /*.navigation a.Active {
+        background-color: darkred;
+      }*/
+      .navigation li a:hover,
+      .navigation a.Active:hover {
+        background-color: rgb(87, 87, 87);
+      }
+      .navigation .dropdowncontent {
+        display: none;
+        position: absolute;
+        background-color: rgb(122, 122, 122);
+        min-width: 100px;
+        z-index: 10;
+      }
+      .navigation .dropdowncontent a {
+        display: block;
+        text-align: left;
+      }
+      .navigation li.dropdown:hover .dropdowncontent {
+        display: block;
+      }
+      #rectangle {
+        height: 340px;
+        width: 1180px;
+        margin-left: 150px;
+        margin-top: 14px;
+        background-color: rgb(168, 168, 168);
+        opacity: 50%;
+        position: relative;
+        z-index: 1;
+      }
+      .bigpic {
+        width: 1575px;
+        margin-top: 52px;
+        margin-left: -7px;
+      }
+      .saintro {
+        font-family: Verdana;
+        font-size: 14pt;
+        color: black;
+        margin-top: -305px;
+        margin-left: 199px;
+        margin-right: 232px;
+        position: relative;
+        z-index: 6;
+        line-height: 25pt;
+      }
+      audio {
+        position: relative;
+        top: 10px;
+        margin-left: 607px;
+        z-index: 15;
+      }
+      .maincont {
+        padding-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Coffee &#38; Desserts</h1>
+    <div class="navigation">
+      <ul>
+        <li><a href="index.htm" class="Active">Home</a></li>
+        <li><a href="aboutme.htm" class="Active">About Me</a></li>
+        <li class="dropdown">
+          <a href="southasianfood.htm" class="Active">South Asian Food</a>
+          <div class="dropdowncontent">
+            <a href="paradisebiryani.htm">Paradise Biryani Pointe</a>
+            <a href="tirubhimas.htm">Tirupathi Bhimas</a>
+            <a href="shalimar.htm">Shalimar</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="eastasianfood.htm" class="Active">East Asian Food</a>
+          <div class="dropdowncontent">
+            <a href="bananaleaf.htm">Banana Leaf</a>
+            <a href="champagarden.htm">Champa Garden</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="coffeeanddesserts.htm" class="Active">Coffee and Desserts</a>
+          <div class="dropdowncontent">
+            <a href="doughweime.htm">Doughweime</a>
+            <a href="slapface.htm">Slap Face Coffee and Tea</a>
+          </div>
+        </li>
+        <li><a href="contactus.htm" class="Active">Contact Us</a></li>
+        <li><a href="credits.htm" class="Active">Credits</a></li>
+      </ul>
+    </div>
+    <div class="maincont">
+      <div id="rectangle"></div>
+      <p class="saintro">
+        I'm sure you've seen (and hopefully tasted!) by now the unique Eastern
+        flavours that are so natural and characteristic of the Bay. But, the
+        people of the Bay Area definitely know how to bring in the classics as
+        well. Whether you're looking for a quiet, aesthetic coffee shop with
+        standard coffees and pastries to spend the afternoon at, or you're
+        looking for a trendy spot full of life and some fun performances, the
+        Bay has got you covered. With places offering everything from basic
+        coffees and french pastries to some unique Asian buns and treats, you
+        will surely find something you love!
+      </p>
+      <audio src="cdbg.mp3" controls autoplay></audio>
+    </div>
+    <img
+      class="bigpic"
+      src="mycnd.jpg"
+      alt="coffeeanddesserts"
+      usemap="#cdmap"
+    />
+    <map name="cdmap"
+      ><area
+        shape="rect"
+        coords="71,0,782,459"
+        href="doughweime.htm"
+        alt="doughweime"
+      />
+      <area
+        shape="rect"
+        coords="941,0,1484,382"
+        href="slapface.htm"
+        alt="slapface"
+      />
+    </map>
+  </body>
+</html>
