@@ -1,16 +1,24 @@
+<!--
+Table created with a <table> tag and at least one colspan or rowspan attribute - located on Credits page
+Bulleted or numbered list with one or more indented sub-lists - located on About Me page
+Contact page contains a form that includes radio buttons and/or check boxes, text and text area fields, and a <select> tag - located on Contact Us page
+A PHP mailer should be used at the server to send the form results to your email address - located in mailer.php file
+Image map with at least two hot spots on a single image - located on the South Asian Food, East Asian Food, and Coffee and Desserts pages (at the bottom)
+At least one video exists on your site - located on Home Page
+Background music plays automatically on one of your pages when it loads or audio controls allow the user to play the music if desired - located on the South Asian Food, East Asian Food, and Coffee and Desserts pages
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
     />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="mobile-web-app-capable" content="yes" />
     <title>Bay Area Bites</title>
     <style>
       body {
@@ -24,7 +32,7 @@
       }
 
       h1 {
-        font-family: Arial;
+        font-family: Cookie;
         font-size: 38pt;
         color: rgb(34, 34, 34);
         text-align: center;
@@ -147,44 +155,9 @@
       }
       */
     </style>
-
-    <script>
-      function mytbig() {
-        document.getElementById("t").style.fontSize = "44pt";
-      }
-      function mytback() {
-        document.getElementById("t").style.fontSize = "38pt";
-      }
-      function newt() {
-        mynum = Math.floor(Math.random() * 2);
-        if (mynum == 0) {
-          document.getElementById("t").innerHTML = "Bay Area Bitez";
-        } else {
-          document.getElementById("t").innerHTML = "Bay Area Bites";
-        }
-      }
-
-      // <![CDATA[
-      var mobile =
-        /iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(
-          navigator.userAgent.toLowerCase()
-        );
-      if (mobile) {
-        document.location = "projectMobile.htm";
-      }
-      // ]]>
-    </script>
   </head>
   <body>
-    <h1>
-      <span
-        id="t"
-        onmouseover="mytbig()"
-        onmouseout="mytback()"
-        onclick="newt()"
-        >Bay Area Bites</span
-      >
-    </h1>
+    <h1>Bay Area Bites</h1>
     <!--
     <table>
       <tr>
