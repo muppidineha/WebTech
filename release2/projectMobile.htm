@@ -4,38 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta
       name="description"
-      content="Dive into a hub of diverse, Indian, Asian, and coffee time cuisines in the Bay Area with Neha. Stop by Doughweime, a fast growing donut and pastry shop located in the Fremont Niles district."
+      content="Dive into a hub of diverse, Indian, Asian, and coffee time cuisines in the Bay Area with Neha"
     />
     <meta
       name="keywords"
-      content="bay area, bay area bites, san francisco, restaurants, doughweime, fremont, niles, pastries, donuts, malasada donuts, Hawaain mochi, food truck"
+      content="bay area, bay area bites, san francisco, restaurants, Indian food, Asian food, coffee and desserts, bay area food"
     />
-    <title>Doughweime</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
     />
+    <title>Bay Area Bites</title>
     <style>
       body {
-        background-image: url("wood.png");
+        background-image: url("homebg.png");
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        overflow-y: hidden;
         overflow-x: hidden;
+        /*background-repeat: no-repeat;
+        object-fit: fill;*/
       }
+
       h1 {
         font-family: Cookie;
-        font-size: 34pt;
-        color: rgba(228, 227, 227, 0.979);
+        font-size: 38pt;
+        color: rgb(34, 34, 34);
         text-align: center;
-        margin-top: 22px;
-        margin-bottom: 11px;
-        z-index: 10;
+        margin-top: 19px;
+        margin-bottom: 14px;
       }
+
+      table {
+        font-family: Tahoma;
+        color: white;
+        align-content: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      tr {
+        align-content: center;
+      }
+
+      td {
+        padding-left: 17px;
+        padding-right: 17px;
+      }
+
+      /* ------------------------------------------------------------------ */
+
       .navigation {
         position: sticky;
         top: 0px;
@@ -72,7 +95,9 @@
         min-width: 100px;
         font-weight: lighter;
       }
-
+      /*.navigation a.Active {
+        background-color: darkred;
+      }*/
       .navigation li a:hover,
       .navigation a.Active:hover {
         background-color: rgb(87, 87, 87);
@@ -91,59 +116,61 @@
       .navigation li.dropdown:hover .dropdowncontent {
         display: block;
       }
-      .words {
-        /* padding-left: 2px; */
-        /*padding-right: 22px;*/
-        font-family: Verdana;
-        font-size: 14pt;
-        color: black;
-        /*background-color: rgb(168, 168, 168);*/
-        padding-right: 20px;
-        padding-left: 35px;
-        height: 600px;
-        width: 740px;
-        margin-left: 38px;
-        margin-top: 125px;
-        top: -55px;
-        position: relative;
-        z-index: 4;
-        line-height: 25pt;
-        /*opacity: 60%;*/
-      }
-      .myrating {
-        font-family: Tahoma;
-        font-size: 19pt;
-        font-weight: 500;
-        margin-left: 200px;
-        color: black;
-        position: relative;
-        z-index: 1;
-      }
-      .myshape {
-        height: 575px;
-        width: 770px;
-        padding-left: 40px;
-        padding-right: 32px;
-        margin-left: 24px;
-        margin-top: -718px;
+      #rectangle {
+        height: 605px;
+        width: 100;
+        margin-left: 2px;
+        margin-top: 215px;
         background-color: rgb(168, 168, 168);
-        opacity: 50%;
-        position: relative;
-        z-index: -1;
+        opacity: 85%;
+        z-index: -5;
       }
-
-      img {
-        transform: scale(0.7, 0.65);
-        /*float: right;*/
-        margin-top: -870px;
-        margin-right: -89px;
-        top: -100px;
-        float: right;
+      iframe {
+        /*transform: scale(0.7, 0.7);*/
+        margin-top: 1px;
+        margin-left: auto;
       }
+      h4 {
+        font-family: Tahoma;
+        text-align: center;
+        color: black;
+        font-style: italic;
+        font-weight: 550;
+        margin-top: -200px;
+        padding-top: 39px;
+        font-size: 15pt;
+      }
+      .intropara {
+        font-family: Tahoma;
+        color: black;
+        padding-left: 31px;
+        padding-right: 31px;
+        font-size: 14pt;
+        text-align: center;
+        line-height: 23pt;
+      }
+      /*
+      td.a {
+        color: white;
+        text-decoration: none;
+      }
+      */
     </style>
   </head>
   <body>
-    <h1>Doughweime</h1>
+    <h1>Bay Area Bites</h1>
+    <!--
+    <table>
+      <tr>
+        <td><a href="aboutme.htm" style="color: white" ;>About Me</a></td>
+        <td>South Asian Food</td>
+        <td>East Asian Food</td>
+        <td>Coffee and Desserts</td>
+        <td>Contact Us</td>
+        <td>Credits</td>
+      </tr>
+    </table>
+    -->
     <div class="navigation">
       <ul>
         <li><a href="index.htm" class="Active">Home</a></li>
@@ -175,31 +202,21 @@
       </ul>
     </div>
     <div id="rectangle">
-      <p class="words">
-        <span class="myrating">
-          Rating: &#9733; &#9733; &#9733; &#9733; &#9733; (5/5)
-        </span>
-        <br />
-        <br />
-        Doughweime is a fairly new bakery that has opened up in the popular
-        historic Niles District of the Southeast Bay city of Fremont. Just as
-        quirky as its name, this shop offers a variety of pastery offerings,
-        ranging from classic donuts and buns to some unique concoctions and
-        unthinkable flavors. Looking for a classic glazed donut? They've got it.
-        Interested in trying out unique malasada donuts or Hawaaian mochi
-        donuts? They've got that too1 And with flavors as unique as salted duck
-        egg custard and black sesame mochi, there's always something new and
-        exciting to try. The pandemic has certainly been hard on this small
-        business, but they have taken it in their stride, closing out their
-        physical store front and opting for an online ordering format as well as
-        convenient pickup options at the local Niles farmers market. If you've
-        got a sweet tooth or are in the mood for a unique flavor experience,
-        Doughweime is the place for you!
+      <h4>Journey into the diverse food hub that is the Bay!</h4>
+      <p class="intropara">
+        Welcome to Bay Area Bites, your personal guide to the best that the Bay
+        Area has to offer! From popular, unique-to-the-Bay chains to smaller
+        hole-in-the-wall gems, we're here to guide you through the diverse
+        deliciousness that the Bay has to offer. Malaysian appetizers, Indian
+        entrees, classic snacks, you name it. We hope you're hungry, because
+        it's time to eat! <br /><br />
+        <iframe
+          src="https://www.youtube.com/embed/-zhea4BMTGM"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </p>
-      <a href="https://www.doughweime.com/s/order" target="_blank"
-        ><img src="dwm.jpg" alt="picofDWM"
-      /></a>
-      <div class="myshape"></div>
     </div>
   </body>
 </html>

@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Dive into a hub of diverse, Indian, Asian, and coffee time cuisines in the Bay Area with Neha. Check out Slapface Coffee and Tea, a bustling coffeeshop located in downtown Fremont."
+      content="Dive into a hub of diverse, Indian, Asian, and coffee time cuisines in the Bay Area with Neha. Learn more about Neha and how she fell in love with exploring foods."
     />
     <meta
       name="keywords"
-      content="bay area, bay area bites, san francisco, restaurants, slapface, fremont, pastries, coffee, tea, cookies, croissants"
+      content="bay area, bay area bites, san francisco, restaurants, Neha, about Neha, foodie, sweettooth, review"
     />
-    <title>Slapface Coffee and Tea</title>
+    <title>About Me</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
@@ -24,8 +24,7 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        overflow-y: hidden;
-        overflow-x: hidden;
+        /* overflow-y: hidden; */
       }
       h1 {
         font-family: Cookie;
@@ -34,14 +33,48 @@
         text-align: center;
         margin-top: 22px;
         margin-bottom: 11px;
-        z-index: 10;
+        display: none;
       }
+
+      .words {
+        /* padding-left: 2px; */
+        /*padding-right: 22px;*/
+        font-family: Verdana;
+        font-size: 14pt;
+        color: black;
+        /*background-color: rgb(168, 168, 168);*/
+        padding-right: 20px;
+        padding-left: 35px;
+        height: 600px;
+        width: 740px;
+        margin-left: 38px;
+        margin-top: 125px;
+        top: -69px;
+        position: relative;
+        z-index: 10;
+        line-height: 25pt;
+        /*opacity: 60%;*/
+      }
+
+      .funfacts {
+        font-family: Verdana;
+        font-size: 13.5pt;
+        color: black;
+        /*background-color: rgb(168, 168, 168);*/
+        padding-right: 20px;
+        padding-left: 60px;
+        position: relative;
+        z-index: 10;
+        line-height: 24pt;
+        top: -320px;
+      }
+
       .navigation {
         position: sticky;
         top: 0px;
         left: 0px;
         width: 100%;
-        z-index: 9;
+        z-index: 11;
       }
       .navigation ul {
         list-style-type: none;
@@ -72,7 +105,9 @@
         min-width: 100px;
         font-weight: lighter;
       }
-
+      /*.navigation a.Active {
+        background-color: darkred;
+      }*/
       .navigation li a:hover,
       .navigation a.Active:hover {
         background-color: rgb(87, 87, 87);
@@ -91,59 +126,48 @@
       .navigation li.dropdown:hover .dropdowncontent {
         display: block;
       }
-      .words {
-        /* padding-left: 2px; */
-        /*padding-right: 22px;*/
-        font-family: Verdana;
-        font-size: 14pt;
-        color: black;
-        /*background-color: rgb(168, 168, 168);*/
-        padding-right: 20px;
-        padding-left: 35px;
-        height: 600px;
-        width: 740px;
-        margin-left: 38px;
-        margin-top: 125px;
-        top: -55px;
-        position: relative;
-        z-index: 4;
-        line-height: 25pt;
-        /*opacity: 60%;*/
-      }
-      .myrating {
-        font-family: Tahoma;
-        font-size: 19pt;
-        font-weight: 500;
-        margin-left: 200px;
-        color: black;
-        position: relative;
-        z-index: 1;
-      }
       .myshape {
-        height: 575px;
-        width: 770px;
-        padding-left: 40px;
+        height: 600px;
+        width: 810px;
+        padding-left: 38px;
         padding-right: 32px;
         margin-left: 24px;
-        margin-top: -718px;
+        margin-top: -907px;
         background-color: rgb(168, 168, 168);
         opacity: 50%;
         position: relative;
-        z-index: -1;
+        z-index: 9;
       }
 
       img {
-        transform: scale(0.9, 0.95);
+        transform: scale(0.83, 0.83);
         /*float: right;*/
-        margin-top: -713px;
-        margin-right: -5px;
+        margin-top: -926px;
+        margin-right: -25px;
         top: -100px;
         float: right;
+        display: none;
       }
     </style>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script>
+      function newt() {
+        document.getElementById("myt").innerHTML = "Meet Neha";
+      }
+      function origt() {
+        document.getElementById("myt").innerHTML = "About Me";
+      }
+
+      $(document).ready(function () {
+        $("#me").fadeIn(1800);
+        $("h1").slideDown(1200);
+      });
+    </script>
   </head>
   <body>
-    <h1>Slapface Coffee and Tea</h1>
+    <h1>
+      <span id="myt" onmouseover="newt()" onmouseout="origt()">About Me</span>
+    </h1>
     <div class="navigation">
       <ul>
         <li><a href="index.htm" class="Active">Home</a></li>
@@ -176,32 +200,39 @@
     </div>
     <div id="rectangle">
       <p class="words">
-        <span class="myrating">
-          Rating: &#9733; &#9733; &#9733; &#9733; &#9734; (4/5)
-        </span>
+        Hi! My name is Neha, and I am what you may call a connoiusser of all
+        things food. I have always had a huge sweet tooth since childhood and
+        have been obsessed with anything chocolate. Being from a culturally
+        diverse hub, however, I quickly found that chocolate was just the tip of
+        the iceberg. With various Indian sweet shops and Asian bakeries to my
+        left and restaurants galore to my right, I slowly but surely explored
+        quite possibly every type of cuisine I could get my hands on. And after
+        years of exploring every nook and cranny of the Bay, I think it's safe
+        to say that I may know a thing or two about some of the best places to
+        check out when here. <br />
         <br />
-        <br />
-        Seeking a traditional coffeeshop experience? A live stand-up comedy
-        show? Both? Then Slapface Coffee and Tea is the place for you! Centrally
-        located in the downtown area of the Southeast Bay city of Fremont,
-        Slapface has got something for everyone. The menu is very simple with
-        the usual offerings of assorted coffee drinks and basic pastries, but
-        what makes this place stand out is its vibrant ambience. With a new live
-        music performance or stand-up event nearly every day, you are bound to
-        be entertained. But if you're looking for a quiet place to study
-        instead, Slapface also has several study rooms available for use, away
-        from the loud hustle and bustle. The only drawback to this spot is
-        perhaps the constant rush of people which, in turn with the live events,
-        can be a bit much for a coffeeshop. The shop has also had to limit its
-        hours due to the ongoing pandemic. But, if you don't mind this and are
-        looking for a fun and memorable experience, then you must give Slapface
-        a try!
+        <span style="font-style: italic">Fun Facts</span>
       </p>
-      <a
-        href="https://www.tastyfind.com/restaurants/slap-face-coffee-tea-37324-fremont-boulevard-fremont"
-        target="_blank"
-        ><img src="slapface.jpg" alt="picofSF"
-      /></a>
+      <div class="funfacts">
+        <ul>
+          <li>I have an incredibly high spice tolerance</li>
+          <li>
+            Though I have a huge sweet tooth, I like to stick to the basics
+          </li>
+          <ul>
+            <li>
+              Find me a basic German chocolate cake from the grocery chain store
+              Safeway or <br />
+              a Chocolate Devotion ice-cream from Coldstone, and I'm happy!
+            </li>
+          </ul>
+          <li>
+            As a foodie, I am open to trying anything, but I can sometimes be
+            picky
+          </li>
+        </ul>
+      </div>
+      <img src="nehapic.jpg" alt="picofneha" id="me" />
       <div class="myshape"></div>
     </div>
   </body>

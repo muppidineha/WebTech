@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Dive into a hub of diverse, Indian, Asian, and coffee time cuisines in the Bay Area with Neha. Check out Banana Leaf, a popular Malaysian restaurant located in Milpitas."
+      content="Dive into a hub of diverse, Indian, Asian, and coffee time cuisines in the Bay Area with Neha. Learn more about the unique coffee time culture of the Bay."
     />
     <meta
       name="keywords"
-      content="bay area, bay area bites, san francisco, restaurants, banana leaf, milpitas, malaysia, malaysian food, roti prata, fried noodles"
+      content="bay area, bay area bites, san francisco, restaurants, coffee and desserts, slapface, doughweime, coffee, tea, pastries, donuts, bay area food"
     />
-    <title>Banana Leaf</title>
+    <title>Coffee and Desserts</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Cookie&display=swap"
@@ -24,7 +24,7 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        overflow-y: hidden;
+        /*overflow-y: hidden;*/
         overflow-x: hidden;
       }
       h1 {
@@ -41,7 +41,7 @@
         top: 0px;
         left: 0px;
         width: 100%;
-        z-index: 9;
+        z-index: 12;
       }
       .navigation ul {
         list-style-type: none;
@@ -72,7 +72,9 @@
         min-width: 100px;
         font-weight: lighter;
       }
-
+      /*.navigation a.Active {
+        background-color: darkred;
+      }*/
       .navigation li a:hover,
       .navigation a.Active:hover {
         background-color: rgb(87, 87, 87);
@@ -82,7 +84,7 @@
         position: absolute;
         background-color: rgb(122, 122, 122);
         min-width: 100px;
-        z-index: 1;
+        z-index: 10;
       }
       .navigation .dropdowncontent a {
         display: block;
@@ -91,59 +93,45 @@
       .navigation li.dropdown:hover .dropdowncontent {
         display: block;
       }
-      .words {
-        /* padding-left: 2px; */
-        /*padding-right: 22px;*/
-        font-family: Verdana;
-        font-size: 14pt;
-        color: black;
-        /*background-color: rgb(168, 168, 168);*/
-        padding-right: 20px;
-        padding-left: 35px;
-        height: 600px;
-        width: 740px;
-        margin-left: 38px;
-        margin-top: 125px;
-        top: -55px;
-        position: relative;
-        z-index: 4;
-        line-height: 25pt;
-        /*opacity: 60%;*/
-      }
-      .myrating {
-        font-family: Tahoma;
-        font-size: 19pt;
-        font-weight: 500;
-        margin-left: 200px;
-        color: black;
-        position: relative;
-        z-index: 1;
-      }
-      .myshape {
-        height: 575px;
-        width: 770px;
-        padding-left: 40px;
-        padding-right: 32px;
-        margin-left: 24px;
-        margin-top: -718px;
+      #rectangle {
+        height: 340px;
+        width: 1180px;
+        margin-left: 150px;
+        margin-top: 14px;
         background-color: rgb(168, 168, 168);
         opacity: 50%;
         position: relative;
-        z-index: -1;
+        z-index: 1;
       }
-
-      img {
-        transform: scale(0.7, 0.65);
-        /*float: right;*/
-        margin-top: -851px;
-        margin-right: -87px;
-        top: -100px;
-        float: right;
+      .bigpic {
+        width: 1575px;
+        margin-top: 52px;
+        margin-left: -7px;
+      }
+      .saintro {
+        font-family: Verdana;
+        font-size: 14pt;
+        color: black;
+        margin-top: -305px;
+        margin-left: 199px;
+        margin-right: 232px;
+        position: relative;
+        z-index: 6;
+        line-height: 25pt;
+      }
+      audio {
+        position: relative;
+        top: 10px;
+        margin-left: 607px;
+        z-index: 15;
+      }
+      .maincont {
+        padding-top: 5px;
       }
     </style>
   </head>
   <body>
-    <h1>Banana Leaf</h1>
+    <h1>Coffee &#38; Desserts</h1>
     <div class="navigation">
       <ul>
         <li><a href="index.htm" class="Active">Home</a></li>
@@ -174,31 +162,40 @@
         <li><a href="credits.htm" class="Active">Credits</a></li>
       </ul>
     </div>
-    <div id="rectangle">
-      <p class="words">
-        <span class="myrating">
-          Rating: &#9733; &#9733; &#9733; &#9733; &#9733; (5/5)
-        </span>
-        <br />
-        <br />
-        Banana Leaf is a trendy Malaysian restaurant located in the outskirts of
-        San Jose. With its delicious food and unique style, the place is always
-        packed with young adults and families alike. This restaurant stands out
-        for more reasons than one, but most exciting is its unique open-flame
-        approach. With the talented chefs cooking on an open flame just inches
-        from where you are seated, you are in for a visual treat! The sizzle as
-        you see and hear juicy meats and seafood get cooked right in front of
-        your eyes is sure to make your mouth water. The restaurant offers an
-        exceptionally large menu ranging from tasty Malaysian staples like Roti
-        Prata as well to unique dishes like Nyonya Shaking Beef. Have kids who
-        need something plain and simple? The restaurant has fun basics for them
-        too, as well as engaging in-restaurant activities. Banana Leaf is a
-        must-try on your next visit to the Bay!
+    <div class="maincont">
+      <div id="rectangle"></div>
+      <p class="saintro">
+        I'm sure you've seen (and hopefully tasted!) by now the unique Eastern
+        flavours that are so natural and characteristic of the Bay. But, the
+        people of the Bay Area definitely know how to bring in the classics as
+        well. Whether you're looking for a quiet, aesthetic coffee shop with
+        standard coffees and pastries to spend the afternoon at, or you're
+        looking for a trendy spot full of life and some fun performances, the
+        Bay has got you covered. With places offering everything from basic
+        coffees and french pastries to some unique Asian buns and treats, you
+        will surely find something you love!
       </p>
-      <a href="https://www.bananaleaf-usa.com/Menu.html" target="_blank"
-        ><img src="bl.jpg" alt="picofBL"
-      /></a>
-      <div class="myshape"></div>
+      <audio src="cdbg.mp3" controls autoplay></audio>
     </div>
+    <img
+      class="bigpic"
+      src="mycnd.jpg"
+      alt="coffeeanddesserts"
+      usemap="#cdmap"
+    />
+    <map name="cdmap"
+      ><area
+        shape="rect"
+        coords="71,0,782,459"
+        href="doughweime.htm"
+        alt="doughweime"
+      />
+      <area
+        shape="rect"
+        coords="941,0,1484,382"
+        href="slapface.htm"
+        alt="slapface"
+      />
+    </map>
   </body>
 </html>
