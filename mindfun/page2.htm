@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Page 2</title>
+
+    <style>
+      /* Your styles go here */
+      img {
+        width: 150px;
+        height: 100px;
+        margin-left: 0px;
+      }
+      p {
+        text-align: center;
+      }
+      #p1 {
+        width: 150px;
+        height: 150px;
+        background-color: azure;
+        border: 2px solid red;
+      }
+      button {
+        margin: 23px;
+      }
+    </style>
+
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script>
+      $(function myb1() {
+        // jQuery methods go here...
+        $("#b1").click(function () {
+          $(this).fadeOut(3000);
+          $("#p1").animate({ width: "300px" }, 3000);
+        });
+      });
+
+      $(function myb2() {
+        $("#b2").click(function () {
+          $(this).fadeOut(3000);
+          $("#p1").delay(3000).animate({ height: "300px" }, 3000);
+        });
+      });
+
+      $(function newmar() {
+        $(document).ready(function () {
+          $("#ele").animate({ marginLeft: "420px" }, 3000);
+          $("#ele").delay(2000).animate({ marginLeft: "0px" }, 3000);
+        });
+      });
+      /* Your additional JavaScript goes here */
+      // <![CDATA[
+      var mobile =
+        /iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(
+          navigator.userAgent.toLowerCase()
+        );
+      if (mobile) {
+        document.location = "page2mobile.htm";
+      }
+      // ]]>
+    </script>
+  </head>
+
+  <body>
+    <img src="elephant.jpg" alt="elephant" id="ele" />
+    <p id="p1">Elephant</p>
+    <p><button id="b1">Button 1</button><button id="b2">Button 2</button></p>
+  </body>
+</html>
